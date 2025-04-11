@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Who's who mumu - 미포해변 근처의 숨겨진 보석 같은 베이커리. 매일 신선한 빵을 굽는 동화같은 동굴 베이커리입니다.">
+    <meta name="keywords" content="후즈후무무, 베이커리, 미포해변, 동굴 베이커리, 부산 베이커리, 신선한 빵, 테라스">
+    <title>Who's who mumu - 부산 미포해변의 동화같은 동굴 베이커리</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="menu-button">
+        <img src="img/menu.png" alt="메뉴 버튼" id="menuBtn">
+    </div>
+    
+    <div class="menu-container" id="menuContainer">
+        <div class="menu-content">
+            <div class="email-popup" id="emailPopup">
+                <div class="email-container">
+                    <img src="img/mail.png" alt="이메일" class="email-icon" id="emailIcon">
+                    <div class="copy-feedback" id="copyFeedback">복사되었습니다!</div>
+                    <a href="https://www.instagram.com/whoswhomumu/" target="_blank" class="instagram-link">
+                        <img src="img/instagram.png" alt="인스타그램" class="instagram-icon">
+                    </a>
+                    <a href="https://www.youtube.com/@whoswhoMumu" target="_blank" class="youtube-link">
+                        <img src="img/youtube.png" alt="유튜브" class="youtube-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <h1 class="visually-hidden">Who's who mumu 베이커리</h1>
+    </header>
+
+    <main>
+        <section class="intro-section">
+            <img src="img/1.png" alt="Who's who mumu 베이커리 전경 - 아늑한 동굴 같은 입구와 로고" class="desktop-image">
+            <img src="img/1-m.jpg" alt="Who's who mumu 베이커리 전경 - 아늑한 동굴 같은 입구와 로고" class="mobile-image">
+            
+            <img src="img/2.png" alt="베이커리 내부 전경과 제품 진열대" class="desktop-image">
+            <img src="img/2-m.jpg" alt="베이커리 내부 전경과 제품 진열대" class="mobile-image">
+            
+            <img src="img/3.png" alt="Who's who mumu의 핵심 가치와 브랜드 스토리" class="desktop-image">
+            <img src="img/3-m.png" alt="Who's who mumu의 핵심 가치와 브랜드 스토리" class="mobile-image">
+            
+            <img src="img/4.png" alt="신선한 재료로 매일 구워내는 베이커리 제품들" class="desktop-image">
+            <img src="img/4-m.jpg" alt="신선한 재료로 매일 구워내는 베이커리 제품들" class="mobile-image">
+            
+            <!-- 스토리 섹션 -->
+            <div class="story-section">
+                <div class="story-title">
+                    <img src="img/story.png" alt="STORY" class="story-title-img">
+                </div>
+                <div class="swiper story-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/story1.png" alt="무무의 이야기 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story2.png" alt="무무의 이야기 2">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <img src="img/6.png" alt="매장 정보와 위치 안내" class="desktop-image">
+            <img src="img/6-m.jpg" alt="매장 정보와 위치 안내" class="mobile-image">
+        </section>
+
+        <section class="location-section">
+            <h2 class="visually-hidden">매장 위치</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.8356760276774!2d129.1714236!3d35.1607187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688d267d41b9e1%3A0x275bab22b64c079d!2sWho&#39;s%20Who%20Mumu!5e0!3m2!1sen!2skr!4v1744354537932!5m2!1sen!2skr"
+                    title="Who's who mumu Bakery Google Maps"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Who's who mumu. All rights reserved.</p>
+            <address class="visually-hidden">
+                부산광역시 해운대구 달맞이길62번길 3 B1
+                <a href="tel:051-747-0521">전화: 051-747-0521</a>
+            </address>
+        </div>
+    </footer>
+
+    <img src="img/logo1.png" alt="Who's who mumu 로고" id="rotateLogo">
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        let lastScrollTop = 0;
+        let lastScrollTime = Date.now();
+        let rotationAngle = 0;
+        const logo = document.getElementById('rotateLogo');
+        
+        window.addEventListener('scroll', function() {
+            const currentTime = Date.now();
+            const st = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollDiff = st - lastScrollTop;
+            
+            const timeDiff = currentTime - lastScrollTime;
+            const scrollSpeed = Math.abs(scrollDiff) / timeDiff;
+            
+            const rotationSpeed = Math.min(scrollSpeed * 30, 15);
+            if (scrollDiff > 0) {
+                rotationAngle += rotationSpeed;
+            } else if (scrollDiff < 0) {
+                rotationAngle -= rotationSpeed;
+            }
+            
+            logo.style.transform = `rotate(${rotationAngle}deg)`;
+            
+            lastScrollTop = st;
+            lastScrollTime = currentTime;
+        });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const menuContainer = document.getElementById('menuContainer');
+        let isMenuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                menuContainer.classList.add('active');
+                menuBtn.style.transform = 'rotate(90deg)';
+            } else {
+                menuContainer.classList.remove('active');
+                menuBtn.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // 메뉴 영역 외 클릭시 닫기
+        document.addEventListener('click', (e) => {
+            if (isMenuOpen && !menuContainer.contains(e.target) && e.target !== menuBtn) {
+                isMenuOpen = false;
+                menuContainer.classList.remove('active');
+                menuBtn.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // 이메일 복사 기능
+        const emailIcon = document.getElementById('emailIcon');
+        const copyFeedback = document.getElementById('copyFeedback');
+        
+        emailIcon.addEventListener('click', async () => {
+            const email = 'unanscompany@gmail.com';
+            try {
+                await navigator.clipboard.writeText(email);
+                copyFeedback.classList.add('show');
+                setTimeout(() => {
+                    copyFeedback.classList.remove('show');
+                }, 2000);
+            } catch (err) {
+                console.error('클립보드 복사 실패:', err);
+            }
+        });
+
+        // 스토리 슬라이더 초기화
+        const storySlider = new Swiper('.story-slider', {
+            slidesPerView: 1,
+            loop: true,
+            effect: 'slide',
+            speed: 500,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            grabCursor: true,
+            touchRatio: 1,
+        });
+    </script>
+</body>
+</html> 
